@@ -1,0 +1,173 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  padding: 1rem;
+  width: 1000px;
+  margin: 3rem 1rem;
+  background-color: rgb(236, 234, 234);
+  
+}
+
+.addBtn{
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addBtn:hover{
+  background-color: #219931;
+  color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.addContainer{
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addContainer form{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+
+.addContainer form input{
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+.addContainer form input:focus{
+  outline: none;
+  border-color: #219931;
+}
+
+.addContainer form .submitBtn{
+  background-color: #ccc;
+  color: white;
+  border: solid 2px #219931;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addContainer form button:hover{
+  background-color: #1a7a1a;
+  transition: all 0.2s ease;
+}
+
+.addContainer form .addContainerClose{
+  display: flex;
+  justify-content: end;
+}
+
+.addContainer form .closeBtn{
+  background-color: #c91c1c;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem;
+}
+
+.addContainer form .closeBtn:hover{
+  background-color: #5a0909;
+  transition: all 0.2s ease;
+}
+
+/* TABLE LIST USERS */
+
+.tableContainer {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.userTable th, .userTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.userTable th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.userTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.userTable tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* TABLE LIST USERS END */
+.userTable td button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.userTable .editBtn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.userTable .editBtn:hover {
+  background-color: #1e5521;
+}
+
+.userTable .deleteBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+.userTable .deleteBtn:hover {
+  background-color: #661211;
+}
+
+.userTable td button:focus {
+  outline: none;
+}
