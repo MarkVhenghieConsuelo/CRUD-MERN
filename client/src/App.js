@@ -13,7 +13,7 @@ function App() {
   
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/get');
+      const response = await axios.get('https://crud-mern-zmm9.onrender.com/get');
       if (response.data.success) {
         setUsers(response.data.data);
       } else {
@@ -48,7 +48,7 @@ function App() {
     try {
       if (editingUser) {
         // Update the user
-        const response = await axios.put(`http://localhost:8080/update`, { 
+        const response = await axios.put(`https://crud-mern-zmm9.onrender.com/update`, { 
           id: editingUser._id, ...formData 
         });
         //alert('User updated successfully!');
@@ -56,7 +56,7 @@ function App() {
 
       } else {
         // Create new user
-        const response = await axios.post('http://localhost:8080/create', formData);
+        const response = await axios.post('https://crud-mern-zmm9.onrender.com/create', formData);
         //alert('User created successfully!');
         toast.success("User created successfully!");
       }
@@ -80,7 +80,7 @@ function App() {
     try {
       const confirmDelete = window.confirm("Are you sure you want to delete this user?");
       if (!confirmDelete) return;
-      await axios.delete(`http://localhost:8080/delete/${id}`);
+      await axios.delete(`https://crud-mern-zmm9.onrender.com/delete/${id}`);
       toast.success("User updated successfully!");
       fetchUsers(); // Re-fetch user list after deletion
     } catch (error) {
